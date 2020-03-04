@@ -1,0 +1,8 @@
+{
+  "baseURL": "http://the-internet.herokuapp.com",
+  "launchOptions": {
+    "defaultViewport": { "width": 1920, "height": 1080 },
+    "headless": false,
+    "args": ["--disable-dev-shm-usage"]
+  }
+}
