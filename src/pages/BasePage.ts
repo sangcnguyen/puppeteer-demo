@@ -10,6 +10,11 @@ export class BasePage {
   }
 
   public async goToPage(): Promise<void> {
-    await this.page.goto(`${config.baseURL}${this.path}`);
+    try {
+      await this.page.goto(`${config.baseURL}${this.path}`);
+    } catch (err) {
+      console.log(err);
+      this.page.close();
+    }
   }
 }
