@@ -13,7 +13,7 @@
     "mocha": "^7.1.2",
     "mocha-typescript": "^1.1.17",
     "puppeteer": "^2.1.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.3"
   },
   "devDependencies": {
     "@types/mocha": "^7.0.2",
