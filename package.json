@@ -12,7 +12,7 @@
   "dependencies": {
     "mocha": "^7.1.2",
     "mocha-typescript": "^1.1.17",
-    "puppeteer": "^2.1.1",
+    "puppeteer": "^3.2.0",
     "typescript": "^3.8.3"
   },
   "devDependencies": {
