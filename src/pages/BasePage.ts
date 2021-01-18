@@ -11,7 +11,10 @@ export class BasePage {
 
   public async goToPage(): Promise<void> {
     try {
-      await this.page.goto(`${config.baseURL}${this.path}`);
+      await this.page.goto(`${config.baseURL}${this.path}`, {
+        waitUntil: "load",
+        timeout: 0,
+      });
     } catch (err) {
       console.log(err);
       this.page.close();

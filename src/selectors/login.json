@@ -1,5 +1,0 @@
-{
-  "usernameInput": "#username",
-  "passwordInput": "#password",
-  "loginButton": "[type='submit'][class='radius']"
-}

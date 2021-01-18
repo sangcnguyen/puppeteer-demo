@@ -1,12 +1,22 @@
-import { suite, test } from "mocha-typescript";
 import { LoginPage } from "../pages/LoginPage";
-import { TestListener } from "./TestListener";
-@suite
-class LoginTest extends TestListener {
-  @test
-  public async loginTest(): Promise<void> {
-    const loginPage = new LoginPage(this.page);
+import puppeteer, { Page, Browser } from "puppeteer";
+import config from "../data/config.json";
+
+describe("Login", () => {
+  let browser: Browser, page: Page, loginPage: LoginPage;
+
+  before(async () => {
+    browser = await puppeteer.launch(config.launchOptions);
+    page = await browser.newPage();
+    loginPage = new LoginPage(page);
     await loginPage.goToPage();
+  });
+
+  after(async () => {
+    await browser.close();
+  });
+
+  it("verify users login successfully", async () => {
     await loginPage.login();
-  }
-}
+  });
+});
